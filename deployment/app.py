@@ -6,7 +6,7 @@ import pickle
 
 complete = pickle.load(open('pipe.pkl', 'rb'))
 
-st.header('Prediksi Harga Rental OYO')
+st.header('Prediksi Harga Rental Property')
 
 bedrooms = st.number_input ('Masukkan jumlah kamar tidur')
 calculated_host_listings_count = st.number_input('Masukkan jumlah kamar mandi')
@@ -33,13 +33,3 @@ if st.button('Submit'):
 
     st.write(X)
     st.text(complete.predict(X))
-    
-
-'''scaler_dat = pd.DataFrame(pipe.transform(num_df))
-encoded_dat = pd.DataFrame(pipe.transform(cat_df))
-    
-    
-
-    'pred = model.predict(X)'
-
-    'st.text(f'Harga Rumah: EUR {pred[0]}')'''
